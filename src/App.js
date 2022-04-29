@@ -12,8 +12,8 @@ function App() {
     window.stream = stream; // make variable available to browser console
     video.srcObject = stream;
     video.autoplay = true;
-    video.muted = true
-    video.loop = true
+    video.muted = true;
+    video.loop = true;
     video.load()
   }
   
@@ -59,7 +59,7 @@ function App() {
         <span>getUserMedia</span>
       </h1>
 
-      <video id="gum-local" autoPlay playsInline />
+      <video id="gum-local" autoPlay loop muted playsInline>
       <button onClick={()=>init()} id="showVideo">Open camera</button>
 
       <div id="errorMsg"></div>
