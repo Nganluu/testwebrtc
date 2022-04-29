@@ -60,6 +60,7 @@ function App() {
       </h1>
 
       <video id="gum-local" autoPlay loop muted playsInline>
+      </video>
       <button onClick={()=>init()} id="showVideo">Open camera</button>
 
       <div id="errorMsg"></div>
