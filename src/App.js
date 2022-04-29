@@ -9,11 +9,9 @@ function App() {
 
   function handleSuccess(stream) {
     const video = document.querySelector("video");
-    const videoTracks = stream.getVideoTracks();
-    console.log("Got stream with constraints:", constraints);
-    console.log(`Using video device: ${videoTracks[0].label}`);
     window.stream = stream; // make variable available to browser console
     video.srcObject = stream;
+    video.play();
   }
   
   const errorMsg= (msg, error) => {
@@ -58,7 +56,7 @@ function App() {
         <span>getUserMedia</span>
       </h1>
 
-      <video id="gum-local" autoPlay playsInline></video>
+      <video id="gum-local" autoPlay playsInline />
       <button onClick={()=>init()} id="showVideo">Open camera</button>
 
       <div id="errorMsg"></div>
