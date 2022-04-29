@@ -11,6 +11,7 @@ function App() {
     const video = document.querySelector("video");
     window.stream = stream; // make variable available to browser console
     video.srcObject = stream;
+    video.autoplay = true;
     video.play();
   }
   
