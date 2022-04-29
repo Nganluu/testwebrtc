@@ -44,7 +44,6 @@ function App() {
     try {
       const stream = await navigator.mediaDevices.getUserMedia(constraints);
       handleSuccess(stream);
-      e.target.disabled = true;
     } catch (e) {
       handleError(e);
     }
