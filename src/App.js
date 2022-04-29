@@ -12,7 +12,9 @@ function App() {
     window.stream = stream; // make variable available to browser console
     video.srcObject = stream;
     video.autoplay = true;
-    video.play();
+    video.muted = true
+    video.loop = true
+    video.load()
   }
   
   const errorMsg= (msg, error) => {
