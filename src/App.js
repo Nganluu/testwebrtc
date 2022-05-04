@@ -14,7 +14,7 @@ function App() {
     video.autoplay = true;
     video.muted = true;
     video.loop = true;
-    video.load()
+    video.play()
   }
   
   const errorMsg= (msg, error) => {
