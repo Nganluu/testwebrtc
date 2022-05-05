@@ -1,5 +1,5 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
   const constraints = (window.constraints = {
@@ -14,16 +14,17 @@ function App() {
     video.autoplay = true;
     video.muted = true;
     video.loop = true;
-    video.play()
+    video.play();
   }
-  
-  const errorMsg= (msg, error) => {
-    const errorElement = document.querySelector('#errorMsg');
+
+  const errorMsg = (msg, error) => {
+    const errorElement = document.querySelector("#errorMsg");
     errorElement.innerHTML += `<p>${msg}</p>`;
-    if (typeof error !== 'undefined') {
+    if (typeof error !== "undefined") {
       console.error(error);
+      throw Error(error.toString());
     }
-  }
+  };
 
   function handleError(error) {
     if (error.name === "OverconstrainedError") {
@@ -59,9 +60,10 @@ function App() {
         <span>getUserMedia</span>
       </h1>
 
-      <video id="gum-local" autoPlay loop muted playsInline>
-      </video>
-      <button onClick={()=>init()} id="showVideo">Open camera</button>
+      <video id="gum-local" autoPlay muted playsInline></video>
+      <button onClick={() => init()} id="showVideo">
+        Open camera
+      </button>
 
       <div id="errorMsg"></div>
 
