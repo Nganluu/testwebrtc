@@ -11,10 +11,10 @@ function App() {
     const video = document.querySelector("video");
     window.stream = stream; // make variable available to browser console
     video.srcObject = stream;
-    video.autoplay = true;
-    video.muted = true;
-    video.loop = true;
-    video.play();
+    // video.autoplay = true;
+    // video.muted = true;
+    // video.loop = true;
+    // video.play();
   }
 
   const errorMsg = (msg, error) => {
