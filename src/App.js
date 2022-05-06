@@ -60,7 +60,7 @@ function App() {
         <span>getUserMedia</span>
       </h1>
 
-      <video id="gum-local" webkitplaysinline="true" autoPlay={true} muted={true} playsInline={true}></video>
+      <video id="gum-local" webkit-playsinline={true} autoPlay={true} muted={true} playsInline={true}></video>
       <button onClick={() => init()} id="showVideo">
         Open camera
       </button>
