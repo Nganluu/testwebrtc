@@ -46,6 +46,8 @@ function App() {
   const init = async (e) => {
     try {
       const stream = await navigator.mediaDevices.getUserMedia(constraints);
+      const video = document.querySelector("video");
+      console.log("video ", video)
       handleSuccess(stream);
     } catch (e) {
       handleError(e);
@@ -56,7 +58,7 @@ function App() {
     <div id="container">
       <h1>
         <a href="//webrtc.github.io/samples/" title="WebRTC samples homepage">
-          WebRTC samples
+          WebRTC samples 1
         </a>
         <span>getUserMedia</span>
       </h1>
