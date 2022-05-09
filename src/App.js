@@ -11,7 +11,7 @@ function App() {
     const video = document.querySelector("video");
     window.stream = stream; // make variable available to browser console
     video.srcObject = stream;
-    console.log(video)
+    console.log(video.toString())
     // video.autoplay = true;
     // video.muted = true;
     // video.loop = true;
@@ -47,7 +47,7 @@ function App() {
     try {
       const stream = await navigator.mediaDevices.getUserMedia(constraints);
       const video = document.querySelector("video");
-      console.log("video ", video)
+      console.log("video ", video.toString())
       handleSuccess(stream);
     } catch (e) {
       handleError(e);
