@@ -10,10 +10,14 @@ function App() {
 
   function handleSuccess(stream) {
     const video = document.querySelector("video");
+    video.muted = true;
     window.stream = stream; // make variable available to browser console
     video.srcObject = stream;
-    console.log(video.toString());
-    console.log(adapter.browserDetails);
+    var test = video.cloneNode();
+    console.log("browser: ", adapter.browserDetails);
+    console.log(video.muted, " ", video.autoplay, " ", video.playsInline);
+
+    throw new Error(test.outerHTML);
 
     // video.autoplay = true;
     // video.muted = true;
@@ -50,7 +54,8 @@ function App() {
     try {
       const stream = await navigator.mediaDevices.getUserMedia(constraints);
       const video = document.querySelector("video");
-      console.log("video ", video.toString());
+      var test = video.cloneNode();
+      console.log("video ", test.outerHTML);
       handleSuccess(stream);
     } catch (e) {
       handleError(e);
@@ -61,17 +66,17 @@ function App() {
     <div id="container">
       <h1>
         <a href="//webrtc.github.io/samples/" title="WebRTC samples homepage">
-          WebRTC samples 1
+          WebRTC samples 1.1
         </a>
         <span>getUserMedia</span>
       </h1>
 
       <video
         id="gum-local"
-        webkit-playsinline={true}
-        autoPlay={true}
         muted={true}
-        playsInline={true}
+        autoPlay
+        playsInline
+        style={{ WebkitPlaysInline: true }}
       ></video>
       <button onClick={() => init()} id="showVideo">
         Open camera

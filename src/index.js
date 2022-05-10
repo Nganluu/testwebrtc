@@ -5,6 +5,7 @@ import App from './App';
 import * as Sentry from "@sentry/react";
 import { BrowserTracing } from "@sentry/tracing";
 import reportWebVitals from './reportWebVitals';
+import { createRoot } from 'react-dom/client';
 
 Sentry.init({
   dsn: "https://4390561951674a97979b4e70a828aa88@o1220188.ingest.sentry.io/6370123",
@@ -15,12 +16,15 @@ Sentry.init({
   // We recommend adjusting this value in production
   tracesSampleRate: 1.0,
 });
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const container = document.getElementById("root")
+const root = createRoot(container); 
+root.render(<App/>)
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <App />
+//   </React.StrictMode>,
+//   document.getElementById('root')
+// );
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
