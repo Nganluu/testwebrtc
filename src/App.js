@@ -1,5 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
+import adapter from "webrtc-adapter";
 
 function App() {
   const constraints = (window.constraints = {
@@ -11,7 +12,9 @@ function App() {
     const video = document.querySelector("video");
     window.stream = stream; // make variable available to browser console
     video.srcObject = stream;
-    console.log(video.toString())
+    console.log(video.toString());
+    console.log(adapter.browserDetails);
+
     // video.autoplay = true;
     // video.muted = true;
     // video.loop = true;
@@ -47,7 +50,7 @@ function App() {
     try {
       const stream = await navigator.mediaDevices.getUserMedia(constraints);
       const video = document.querySelector("video");
-      console.log("video ", video.toString())
+      console.log("video ", video.toString());
       handleSuccess(stream);
     } catch (e) {
       handleError(e);
@@ -63,7 +66,13 @@ function App() {
         <span>getUserMedia</span>
       </h1>
 
-      <video id="gum-local" webkit-playsinline={true} autoPlay={true} muted={true} playsInline={true}></video>
+      <video
+        id="gum-local"
+        webkit-playsinline={true}
+        autoPlay={true}
+        muted={true}
+        playsInline={true}
+      ></video>
       <button onClick={() => init()} id="showVideo">
         Open camera
       </button>
