@@ -1,6 +1,8 @@
 import logo from "./logo.svg";
 import "./App.css";
 import adapter from "webrtc-adapter";
+import ZJSBridge from "zalo-js-bridge";
+
 
 function App() {
   const constraints = (window.constraints = {
@@ -64,6 +66,17 @@ function App() {
 
   return (
     <div id="container">
+        <button
+        className="top-0 start-0"
+        style={{ position: "absolute", zIndex: "1000" }}
+        onClick={() => {
+          ZJSBridge.H5.closeWebview((e) => {
+            alert(JSON.stringify(e));
+          });
+        }}
+      >
+        close
+      </button>
       <h1>
         <a href="//webrtc.github.io/samples/" title="WebRTC samples homepage">
           WebRTC samples 1.1
