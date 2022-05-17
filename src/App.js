@@ -71,7 +71,8 @@ function App() {
         className="me-5"
         onClick={() => {
           if (platform.os.family.includes("iOS")) {
-            ZJSBridge.Zalo.openOutApp("https://google.com", (e) => {
+            let url = window.location.href
+            ZJSBridge.Zalo.openOutApp(url, (e) => {
               // alert(JSON.stringify(e));
             });
           }
