@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import adapter from "webrtc-adapter";
 import ZJSBridge from "zalo-js-bridge";
+import platform from "platform";
 
 function App() {
   const constraints = (window.constraints = {
@@ -69,9 +70,11 @@ function App() {
         style={{ backgroundColor: "blue" }}
         className="me-5"
         onClick={() => {
-          ZJSBridge.Zalo.openOutApp("https://google.com", (e) => {
-            alert(JSON.stringify(e));
-          });
+          if (platform.os.family.includes("IOS")) {
+            ZJSBridge.Zalo.openOutApp("https://google.com", (e) => {
+              alert(JSON.stringify(e));
+            });
+          }
         }}
       >
         open gg
