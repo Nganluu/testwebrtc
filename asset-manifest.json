@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/testwebrtc/static/css/main.a91be61a.css",
-    "main.js": "/testwebrtc/static/js/main.6868695b.js",
-    "static/js/787.0c3f432a.chunk.js": "/testwebrtc/static/js/787.0c3f432a.chunk.js",
-    "static/media/logo.svg": "/testwebrtc/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/testwebrtc/index.html",
-    "main.a91be61a.css.map": "/testwebrtc/static/css/main.a91be61a.css.map",
-    "main.6868695b.js.map": "/testwebrtc/static/js/main.6868695b.js.map",
-    "787.0c3f432a.chunk.js.map": "/testwebrtc/static/js/787.0c3f432a.chunk.js.map"
+    "main.css": "/Nganluu/WebRTC-samples/static/css/main.a91be61a.css",
+    "main.js": "/Nganluu/WebRTC-samples/static/js/main.8f53a553.js",
+    "static/js/787.0c3f432a.chunk.js": "/Nganluu/WebRTC-samples/static/js/787.0c3f432a.chunk.js",
+    "static/media/logo.svg": "/Nganluu/WebRTC-samples/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/Nganluu/WebRTC-samples/index.html",
+    "main.a91be61a.css.map": "/Nganluu/WebRTC-samples/static/css/main.a91be61a.css.map",
+    "main.8f53a553.js.map": "/Nganluu/WebRTC-samples/static/js/main.8f53a553.js.map",
+    "787.0c3f432a.chunk.js.map": "/Nganluu/WebRTC-samples/static/js/787.0c3f432a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a91be61a.css",
-    "static/js/main.6868695b.js"
+    "static/js/main.8f53a553.js"
   ]
 }
