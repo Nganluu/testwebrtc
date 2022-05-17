@@ -70,8 +70,7 @@ function App() {
         style={{ backgroundColor: "blue" }}
         className="me-5"
         onClick={() => {
-          alert(platform.os.family.includes("IOS"))
-          if (platform.os.family.includes("IOS")) {
+          if (platform.os.family.includes("iOS")) {
             ZJSBridge.Zalo.openOutApp("https://google.com", (e) => {
               alert(JSON.stringify(e));
             });
