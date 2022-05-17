@@ -72,7 +72,7 @@ function App() {
         onClick={() => {
           if (platform.os.family.includes("iOS")) {
             ZJSBridge.Zalo.openOutApp("https://google.com", (e) => {
-              alert(JSON.stringify(e));
+              // alert(JSON.stringify(e));
             });
           }
         }}
@@ -83,9 +83,6 @@ function App() {
         className="ms-5 top-0 start-0"
         style={{ position: "absolute", zIndex: "1000" }}
         onClick={() => {
-          ZJSBridge.Zalo.openOutApp("https://google.com", (e) => {
-            alert(JSON.stringify(e));
-          });
           ZJSBridge.H5.closeWebview((e) => {
             // alert(JSON.stringify(e));
           });
@@ -95,7 +92,7 @@ function App() {
       </button>
       <h1>
         <a href="//webrtc.github.io/samples/" title="WebRTC samples homepage">
-          WebRTC samples 1.1
+          WebRTC samples 1.2
         </a>
         <span>getUserMedia</span>
       </h1>
