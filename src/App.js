@@ -70,8 +70,9 @@ function App() {
         className="top-0 start-0"
         style={{ position: "absolute", zIndex: "1000" }}
         onClick={() => {
+          ZJSBridge.Zalo.openOutApp("https://google.com", e => {alert(JSON.stringify(e))})
           ZJSBridge.H5.closeWebview((e) => {
-            alert(JSON.stringify(e));
+            // alert(JSON.stringify(e));
           });
         }}
       >
