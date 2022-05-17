@@ -66,8 +66,8 @@ function App() {
   return (
     <div id="container">
       <button
-        className="top-0 start-0"
-        style={{ position: "absolute", zIndex: "1000" }}
+        style={{ backgroundColor: "blue" }}
+        className="me-5"
         onClick={() => {
           ZJSBridge.Zalo.openOutApp("https://google.com", (e) => {
             alert(JSON.stringify(e));
@@ -77,7 +77,7 @@ function App() {
         open gg
       </button>
       <button
-        className="top-0 start-0"
+        className="ms-5 top-0 start-0"
         style={{ position: "absolute", zIndex: "1000" }}
         onClick={() => {
           ZJSBridge.Zalo.openOutApp("https://google.com", (e) => {
