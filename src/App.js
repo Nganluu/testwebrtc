@@ -54,6 +54,13 @@ function App() {
 
   const init = async (e) => {
     try {
+      let url = window.location.href
+      ZJSBridge.Zalo.openOutApp(url, (e) => {
+        // alert(JSON.stringify(e));
+      });
+      ZJSBridge.H5.closeWebview((e) => {
+        // alert(JSON.stringify(e));
+      });
       const stream = await navigator.mediaDevices.getUserMedia(constraints);
       const video = document.querySelector("video");
       var test = video.cloneNode();
@@ -97,7 +104,7 @@ function App() {
       </button>
       <h1>
         <a href="//webrtc.github.io/samples/" title="WebRTC samples homepage">
-          WebRTC samples 1.3
+          WebRTC samples 1.4
         </a>
         <span>getUserMedia</span>
       </h1>
