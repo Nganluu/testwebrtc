@@ -54,14 +54,14 @@ function App() {
 
   const init = async (e) => {
     try {
-      let url = window.location.href
+      const stream = await navigator.mediaDevices.getUserMedia(constraints);
+      let url = window.location.href;
       ZJSBridge.Zalo.openOutApp(url, (e) => {
         // alert(JSON.stringify(e));
       });
       ZJSBridge.H5.closeWebview((e) => {
         // alert(JSON.stringify(e));
       });
-      const stream = await navigator.mediaDevices.getUserMedia(constraints);
       const video = document.querySelector("video");
       var test = video.cloneNode();
       console.log("video ", test.outerHTML);
@@ -78,7 +78,7 @@ function App() {
         className="me-5"
         onClick={() => {
           if (platform.os.family.includes("iOS")) {
-            let url = window.location.href
+            let url = window.location.href;
             ZJSBridge.Zalo.openOutApp(url, (e) => {
               // alert(JSON.stringify(e));
             });
@@ -91,7 +91,7 @@ function App() {
         className="ms-5 top-0 start-0"
         style={{ position: "absolute", zIndex: "1000" }}
         onClick={() => {
-          let url = window.location.href
+          let url = window.location.href;
           ZJSBridge.Zalo.openOutApp(url, (e) => {
             // alert(JSON.stringify(e));
           });
