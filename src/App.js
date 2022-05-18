@@ -104,7 +104,7 @@ function App() {
       </button>
       <h1>
         <a href="//webrtc.github.io/samples/" title="WebRTC samples homepage">
-          WebRTC samples 1.4
+          WebRTC samples 1.5
         </a>
         <span>getUserMedia</span>
       </h1>
